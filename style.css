@@ -1,0 +1,296 @@
+/* ==================================== */
+/* Dark Theme Variables (Based on Portfolio) */
+/* ==================================== */
+:root {
+    --primary-color: #00e5ff; /* Aqua/Teal Accent */
+    --secondary-color: #26a69a; /* Secondary Teal */
+    --success-btn: #4CAF50; /* Standard Success Green for Download */
+    --text-main: #e0e0e0;     /* Light Text */
+    --text-muted: #bdbdbd;
+    --background-dark: #121212; /* Very Dark Background */
+    --card-bg: #1e1e1e;      /* Slightly Lighter Card/Box */
+    --border-dark: #424242;
+    --edit-btn: #FFC107;     /* Yellow/Warning */
+    --delete-btn: #F44336;   /* Red/Danger */
+    --header-bg: #1f3a5a;    /* Dark Header Block */
+}
+
+/* ==================================== */
+/* General & Reset */
+/* ==================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header & Banner Style */
+header {
+    background: var(--header-bg);
+    color: var(--text-main);
+    text-align: center;
+    padding: 30px 10px;
+    border-bottom: 5px solid var(--primary-color); 
+}
+
+header h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    height: 1.2em; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================================== */
+/* Typing Effect CSS */
+/* ==================================== */
+.typing-text {
+    color: var(--primary-color);
+    overflow: hidden; 
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+.typing-caret {
+    display: inline-block;
+    width: 0.5em; 
+    height: 1.2em; 
+    background-color: var(--primary-color);
+    vertical-align: middle;
+    margin-left: 5px;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
+/* ==================================== */
+
+header h2 {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-top: 5px;
+    color: var(--text-main);
+}
+
+header h3 {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 5px 0 0;
+    color: var(--text-muted);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ==================================== */
+/* Form Style */
+/* ==================================== */
+form {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    border: 1px solid var(--border-dark);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label { font-weight: 500; font-size: 0.95em; color: var(--text-muted); }
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid var(--border-dark);
+    border-radius: 6px;
+    font-size: 1em;
+    background: var(--background-dark);
+    color: var(--text-main);
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.4);
+    outline: none;
+    background: var(--card-bg);
+}
+
+textarea { resize: vertical; min-height: 80px; }
+
+/* Submit Button & Download Button */
+button[type="submit"], .download-btn {
+    background: var(--secondary-color);
+    color: var(--text-main);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+button[type="submit"]:hover { background: #009688; }
+
+.download-btn { 
+    margin-bottom: 20px; 
+    background: var(--success-btn); 
+    color: var(--background-dark); 
+}
+.download-btn:hover { background: #43A047; } 
+
+
+/* ==================================== */
+/* Table Style */
+/* ==================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    margin-bottom: 80px;
+    border: 1px solid var(--border-dark);
+}
+
+th, td {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--border-dark);
+    text-align: left;
+    font-size: 0.95em;
+    white-space: pre-wrap;
+    color: var(--text-main);
+}
+
+th { 
+    background: var(--primary-color); 
+    color: var(--background-dark); 
+    font-weight: 600; 
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tr:nth-child(even) { background: #222222; } 
+tr:hover { background: #303030; } 
+
+/* Centering for Date and Class No */
+#todoTable td:nth-child(3),
+#todoTable th:nth-child(3),
+#todoTable td:nth-child(4),
+#todoTable th:nth-child(4) {
+    text-align: center;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 7px 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: var(--background-dark); 
+    margin-right: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.edit-btn { background: var(--edit-btn); }
+.edit-btn:hover { background: #fbc02d; }
+
+.delete-btn { background: var(--delete-btn); }
+.delete-btn:hover { background: #d32f2f; }
+
+
+/* ==================================== */
+/* Bottom Bar (Footer) Animation */
+/* ==================================== */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--header-bg);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 15px;
+    font-weight: 400;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.5);
+    z-index: 100;
+
+    /* Animation properties */
+    transform: translateY(100%); /* Start off-screen bottom */
+    transition: transform 0.8s ease-out; /* Smooth slide up */
+}
+
+.bottom-bar.show {
+    transform: translateY(0); /* Slide into view */
+}
+
+/* ==================================== */
+/* Responsive Design */
+/* ==================================== */
+@media(max-width: 768px){
+    /* FIX 1: Reduce header font size for smaller screens */
+    header h1 {
+        font-size: 1.5em; 
+        height: 1.5em; 
+    }
+    header h2 {
+        font-size: 1.1em;
+    }
+    
+    /* FIX 2: Allow typing text to wrap on small screens */
+    .typing-text {
+        white-space: normal; /* Allow text wrapping */
+        width: 100%;
+        display: block;
+        text-align: center;
+        letter-spacing: 0.05em; 
+    }
+    
+    /* FIX 3: Hide the blinking caret for cleaner look on wrapped text */
+    .typing-caret {
+        display: none; 
+    }
+
+    .container { padding: 0 10px; margin: 20px auto; }
+    
+    /* Table Rows as Blocks for mobile */
+    table, thead, tbody, th, td, tr { display: block; }
+    th { display: none; }
+    td { display: flex; justify-content: space-between; padding: 10px; border-bottom: none; border-top: 1px solid var(--border-dark); }
+    td::before { content: attr(data-label); font-weight: 600; color: var(--primary-color); flex: 1; text-align: left; padding-right: 15px; }
+    tr { margin-bottom: 15px; border: 1px solid var(--border-dark); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    
+    td[data-label="Actions"] { 
+        justify-content: flex-start; 
+        gap: 10px;
+        border-top: none;
+        padding-top: 0;
+    }
+    td[data-label="Actions"]::before { content: ""; flex: 0; }
+}
+

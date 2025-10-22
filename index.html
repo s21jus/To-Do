@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SM High Tech Industrial Engineering Care - To-Do List</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+<header>
+  <h1>
+    <span id="animated-title" class="typing-text"></span>
+    <span class="typing-caret"></span>
+  </h1>
+  <h2>Web Development</h2>
+  <h3>Trainer: Abdullah Al Mamun</h3>
+</header>
+
+<div class="container">
+
+<form id="todoForm">
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" required>
+  </div>
+  <div class="form-group">
+    <label for="polytechnic">Your Polytechnic</label>
+    <input type="text" id="polytechnic" required>
+  </div>
+  <div class="form-group">
+    <label for="classNo">Class No.</label>
+    <input type="number" id="classNo" required>
+  </div>
+  <div class="form-group">
+    <label for="date">Class Date</label>
+    <input type="date" id="date" required>
+  </div>
+  <div class="form-group">
+    <label for="tools">Class Tools Used</label>
+    <input type="text" id="tools" required>
+  </div>
+  <div class="form-group">
+    <label for="workDetails">Class Work Details</label>
+    <textarea id="workDetails" rows="3" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="remarks">Remarks</label>
+    <input type="text" id="remarks">
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<button class="download-btn" id="downloadBtn">Download CSV</button>
+
+<table id="todoTable">
+  <thead>
+    <tr>
+      <th>Your Name</th>
+      <th>Your Polytechnic</th>
+      <th>Class Date</th>
+      <th>Class No.</th>
+      <th>Class Tools Used</th>
+      <th>Class Work Details</th>
+      <th>Remarks</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+</div>
+
+<div class="bottom-bar" id="bottomBar">Excel Style Footer - Submitted by Md Mominul Islam</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
